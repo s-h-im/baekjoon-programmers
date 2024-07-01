@@ -1,13 +1,10 @@
 def solution(s):
-    st = list()
+    stack = []
     for c in s:
         if c == '(':
-            st.append(c)
-
-        if c == ')':
-            try:
-                st.pop()
-            except IndexError:
+            stack.append(c)
+        elif c == ')':
+            if not stack:
                 return False
-
-    return len(st) == 0
+            stack.pop()
+    return len(stack) == 0
