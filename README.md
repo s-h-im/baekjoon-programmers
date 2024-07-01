@@ -1,1 +1,1 @@
-# algorithm-study
+# baekjoon-programmers
