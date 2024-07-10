@@ -5,8 +5,7 @@ def solution(scoville, K):
     heapq.heapify(scoville)
     while scoville[0] < K:
         if len(scoville) < 2:
-            cnt = -1
-            break
+            return -1
         n1 = heapq.heappop(scoville)
         n2 = heapq.heappop(scoville)
         n3 = n1 + n2 * 2
